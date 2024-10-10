@@ -105,6 +105,8 @@ This monorepo consists of three main sections:
 
 ## How to setup for development
 
+- `yarn install`.
+- `yarn add cross-env --dev`.
 - `yarn setup` To fill in the required `.env` files you'll need in each of the application sections (from root of repo).
   - Go fill those out before proceeding. Ensure `server/.env.development` is filled or else things won't work right.
 - `yarn dev:server` To boot the server locally (from root of repo).
