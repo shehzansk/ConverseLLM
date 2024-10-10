@@ -111,11 +111,6 @@ This monorepo consists of three main sections:
 - `yarn dev:frontend` To boot the frontend locally (from root of repo).
 - `yarn dev:collector` To then run the document collector (from root of repo).
 
-[Learn about documents](./server/storage/documents/DOCUMENTS.md)
-
-[Learn about vector caching](./server/storage/vector-cache/VECTOR_CACHE.md)
-
-
 ## 👋 Contributing
 
 - create issue
@@ -126,7 +121,7 @@ This monorepo consists of three main sections:
 
 ---
 
-Copyright © 2024 [Vedant Kohad][https://github.com/kohadved?tab=repositories]. <br />
+Copyright © 2024 [Vedant Kohad][https://github.com/kohadved]. <br />
 This project is [MIT](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
