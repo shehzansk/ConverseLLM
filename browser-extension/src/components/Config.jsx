@@ -18,7 +18,7 @@ export default function Config({ status, onStatusChange }) {
   async function disconnectFromExtension() {
     await chrome.storage.sync.remove(["apiBase", "apiKey"]);
     onStatusChange();
-    setSaveStatus("Successfully disconnected from AnythingLLM");
+    setSaveStatus("Successfully disconnected from ConverseLLM");
     chrome.runtime.sendMessage({ action: "connectionUpdated" });
   }
 
@@ -33,7 +33,7 @@ export default function Config({ status, onStatusChange }) {
       const { online } = await BrowserExtension.checkOnline(apiBase);
       if (!online) {
         setSaveStatus(
-          "AnythingLLM is currently offline. Please try again later."
+          "ConverseLLM is currently offline. Please try again later."
         );
         return;
       }
@@ -45,7 +45,7 @@ export default function Config({ status, onStatusChange }) {
       // Saves the apiBase and apiKey to storage sync.
       await chrome.storage.sync.set({ apiBase, apiKey });
       onStatusChange();
-      setSaveStatus("Successfully connected to AnythingLLM");
+      setSaveStatus("Successfully connected to ConverseLLM");
       chrome.runtime.sendMessage({ action: "connectionUpdated" });
     } catch (error) {
       setSaveStatus(`An error occurred during connection: ${error.message}`);
@@ -77,7 +77,7 @@ export default function Config({ status, onStatusChange }) {
         <div className="w-full flex flex-col gap-y-4">
           <div className="flex flex-col w-full">
             <label className="text-white text-sm font-semibold block mb-3">
-              AnythingLLM Connection String
+              ConverseLLM Connection String
             </label>
             <input
               type="text"
@@ -101,7 +101,7 @@ export default function Config({ status, onStatusChange }) {
           <div className="flex items-center justify-center gap-x-2 bg-zinc-900 p-2.5 rounded-lg">
             <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             <p className="text-green-400 text-sm font-medium">
-              Connected to AnythingLLM
+              Connected to ConverseLLM
             </p>
           </div>
           <button
@@ -122,7 +122,7 @@ export default function Config({ status, onStatusChange }) {
             Disconnect
           </button>
           <div className="bg-red-500/10 border border-red-500/50 text-red-400 p-2.5 rounded-lg">
-            AnythingLLM is currently offline. Please try again later.
+            ConverseLLM is currently offline. Please try again later.
           </div>
         </div>
       )}
