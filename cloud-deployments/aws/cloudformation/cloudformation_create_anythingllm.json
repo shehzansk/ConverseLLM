@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Create a stack that runs AnythingLLM on a single instance",
+  "Description": "Create a stack that runs ConverseLLM on a single instance",
   "Parameters": {
     "InstanceType": {
       "Description": "EC2 instance type",
