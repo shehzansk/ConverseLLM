@@ -3,14 +3,14 @@
   "version": "0.2.0",
   "description": "Document collector server endpoints",
   "main": "index.js",
-  "author": "Timothy Carambat (Mintplex Labs)",
+  "author": "Vedant Kohad (RCOEM)",
   "license": "MIT",
   "private": false,
   "engines": {
     "node": ">=18.12.1"
   },
   "scripts": {
-    "dev": "NODE_ENV=development nodemon --ignore hotdir --ignore storage --trace-warnings index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --ignore hotdir --ignore storage --trace-warnings index.js",
     "start": "NODE_ENV=production node index.js",
     "lint": "yarn prettier --ignore-path ../.prettierignore --write ./processSingleFile ./processLink ./utils index.js"
   },
