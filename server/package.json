@@ -1,16 +1,16 @@
 {
-  "name": "anything-llm-server",
+  "name": "converse-llm-server",
   "version": "0.2.0",
   "description": "Server endpoints to process or create content for chatting",
   "main": "index.js",
-  "author": "Timothy Carambat (Mintplex Labs)",
+  "author": "Vedant Kohad (RCOEM)",
   "license": "MIT",
   "private": false,
   "engines": {
     "node": ">=18.12.1"
   },
   "scripts": {
-    "dev": "NODE_ENV=development nodemon --ignore documents --ignore vector-cache --ignore storage --ignore swagger --trace-warnings index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --ignore documents --ignore vector-cache --ignore storage --ignore swagger --trace-warnings index.js",
     "start": "NODE_ENV=production node index.js",
     "lint": "yarn prettier --ignore-path ../.prettierignore --write ./endpoints ./models ./utils index.js",
     "swagger": "node ./swagger/init.js"
