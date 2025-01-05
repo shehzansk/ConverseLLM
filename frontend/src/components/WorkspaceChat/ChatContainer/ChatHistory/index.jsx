@@ -171,7 +171,7 @@ export default function ChatHistory({
           <p className="text-white/60 text-lg font-base py-4">
             Welcome to your new workspace.
           </p>
-          {!user || user.role !== "default" ? (
+          {/* {!user || user.role !== "default" ? (
             <p className="w-full items-center text-white/60 text-lg font-base flex flex-col md:flex-row gap-x-1">
               To get started either{" "}
               <span
@@ -186,7 +186,7 @@ export default function ChatHistory({
             <p className="w-full items-center text-white/60 text-lg font-base flex flex-col md:flex-row gap-x-1">
               To get started <b className="font-medium italic">send a chat.</b>
             </p>
-          )}
+          )} */}
           <WorkspaceChatSuggestions
             suggestions={workspace?.suggestedMessages ?? []}
             sendSuggestion={handleSendSuggestedMessage}
